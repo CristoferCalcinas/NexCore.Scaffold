@@ -12,7 +12,7 @@ public static class DependencyInjection
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-        services.AddSingleton<AuditableEntityInterceptor>();
+        services.AddScoped<AuditableEntityInterceptor>();
 
         services.AddDbContext<AppDbContext>((sp, options) =>
         {
