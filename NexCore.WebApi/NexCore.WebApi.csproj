@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NexCore.Application\NexCore.Application.csproj" />
+      <ProjectReference Include="..\NexCore.Infrastructure\NexCore.Infrastructure.csproj" />
+      <ProjectReference Include="..\NexCore.Persistence\NexCore.Persistence.csproj" />
+      <ProjectReference Include="..\NexCore.Presentation\NexCore.Presentation.csproj" />
+    </ItemGroup>
+
+</Project>

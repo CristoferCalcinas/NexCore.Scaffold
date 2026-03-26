@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="NexCore.Application/NexCore.Application.csproj" />
+    <Project Path="NexCore.Domain/NexCore.Domain.csproj" />
+    <Project Path="NexCore.Infrastructure/NexCore.Infrastructure.csproj" />
+    <Project Path="NexCore.Persistence/NexCore.Persistence.csproj" />
+    <Project Path="NexCore.Presentation/NexCore.Presentation.csproj" />
+    <Project Path="NexCore.WebApi/NexCore.WebApi.csproj" />
+  </Folder>
+</Solution>
