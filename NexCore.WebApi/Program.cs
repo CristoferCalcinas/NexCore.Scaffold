@@ -2,6 +2,7 @@ using NexCore.Application;
 using NexCore.Infrastructure;
 using NexCore.Persistence;
 using NexCore.Presentation;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
