@@ -8,6 +8,9 @@ public static class DependencyInjection
     {
         var currentAssembly = typeof(DependencyInjection).Assembly;
 
+        services.AddControllers()
+            .AddApplicationPart(typeof(DependencyInjection).Assembly);
+
         return services;
     }
 }
