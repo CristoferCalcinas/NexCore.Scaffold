@@ -1,6 +1,6 @@
 namespace NexCore.Domain.Common;
 
-public abstract class Entity<TId> : IEquatable<Entity<TId>>
+public abstract class Entity<TId> : IEquatable<Entity<TId>>, IAuditableEntity
     where TId : notnull
 {
     private readonly List<IDomainEvent> _domainEvents = [];
@@ -12,6 +12,11 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
     } // Required for EF Core
 
     public TId Id { get; protected set; } = default!;
+
+    public DateTimeOffset CreatedOnUtc { get; set; }
+    public string? CreatedBy { get; set; }
+    public DateTimeOffset? ModifiedOnUtc { get; set; }
+    public string? ModifiedBy { get; set; }
 
     public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 
