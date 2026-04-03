@@ -2,6 +2,7 @@ using NexCore.Application;
 using NexCore.Infrastructure;
 using NexCore.Persistence;
 using NexCore.Presentation;
+using NexCore.WebApi.Exceptions;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,9 @@ builder.Services
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+// Middleware de manejo de excepciones de validación
+app.UseMiddleware<ValidationExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
